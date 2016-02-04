@@ -5,19 +5,54 @@
 
           <meta charset="utf-8" >
 
-          <title> Kripa Homepage </title>
+          <title>Kripa Homepage</title>
 
-          <meta name="description" content=" Explore all the qualities of kripa.. ">
+          <meta name="description" content="Explore all the qualities of kripa..">
 
           <!--
           ============================= styelsheet ==========================
           -->
 
-          <link rel="stylesheet" type="text/css" href="C:\Users\bbart\Desktop\Demo\assests\css\basestyle.css">
+          <link rel="stylesheet" type="text/css" href="C:\Users\bbart\Desktop\temp1\intern-demo\stylesheet\basestyle.css">
+
+          <!--
+          ============================= jQuery link ==========================
+          -->
+
+          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>"
+          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<!-- <script type="text/javascript">
+function Slider(){
+  $(".slider #1").show("fade",500);
+  $(".slider #1").delay(4000).hide("slide",{direction:'left'},500);
+
+  var sc=$(".slider img").size();
+  var count=2;
+
+  setInterval( function() {
+
+    $(".slider #"+count).show("slide",{direction:'right'},500);
+    $(".slider #"+count).delay(4000).hide("slide",{direction:'right'},500);
+
+    if(count==sc)
+    {
+      count=1;
+    }
+    else{
+      count=count+1;
+    }
+  }; 6500);
+}
+
+</script> -->
+
+
+
 
 </head>
 
-<body>
+<body onload="Slider();">
 
             <div class="page">
             <header id="header">
@@ -30,7 +65,7 @@
 
             <div class="wrap clearfix">
                     <div id="content1">
-                      <img style="box-shadow: 10px 10px 10px #000000; width:500px;height:350px;"  src="C:\Users\bbart\Desktop\Demo\assests\images\kripa.jpg" alt="kripa-photo">
+                      <img style="box-shadow: 5px 5px 5px #000000; width:350px;height:300px;"  src="C:\Users\bbart\Desktop\Demo\assests\images\kripa.jpg" alt="kripa-photo">
                     </div>
                     <div id=aboutme>
                       <h1>OVERVIEW</h1>
@@ -39,10 +74,12 @@
             </div>
 
             <div class="wrap clearfix">
-                    <div id="content2">
-                      <img src="assests\images\kripa.jpg" alt="kripa-photo">
+                    <div class=slider>
+                      <img id="1" src="C:\Users\bbart\Desktop\temp1\intern-demo\images\uncc.jpg" border="0" alt="uncc images"/>
+                      <img id="2" src="C:\Users\bbart\Desktop\temp1\intern-demo\images\uncc2.jpg" border="0" alt="uncc2 images"/>
+                      <img id="3" src="C:\Users\bbart\Desktop\temp1\intern-demo\images\uncc3.jpg" border="0" alt="uncc3 images"/>
                     </div>
-                    <div id=about>
+
                       <h1>OVERVIEW</h1>
                       <p>jkdsnjc djkcs djnsbjdjx djjdjdjd  dsddj djdjdj jsjjsjs jsjjsjs </p>
                     </div>
@@ -55,6 +92,4 @@
             </footer>
 
 </body>
-
-
 </html>
