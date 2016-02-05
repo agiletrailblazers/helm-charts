@@ -15,8 +15,8 @@
 
           <link rel="stylesheet" type="text/css" href="C:\Users\bbart\Desktop\temp1\intern-demo\stylesheet\basestyle.css">
 
-          <script src="C:\Users\bbart\Desktop\temp1\intern-demo\js\slider.js">
-</script>
+          <script src="C:\Users\bbart\Desktop\temp1\intern-demo\js\slider.js"></script>
+
 
 
           <!--
@@ -117,7 +117,30 @@
 
               });
 
+              <!--Krithi-->
 
+                function truncat() {
+                  var len = 100;
+                  var p = document.getElementById('truncateMe');
+                  if (p) {
+
+                    var trunc = p.innerHTML;
+                    if (trunc.length > len) {
+
+                      trunc = trunc.substring(0, len);
+                      trunc = trunc.replace(/\w+$/, '');
+
+                      trunc += '<a href="#" ' +
+                        'onclick="this.parentNode.innerHTML=' +
+                        'unescape(\'' + escape(p.innerHTML) + '\');return false;">' +
+                        '...<\/a>';
+                      p.innerHTML = trunc;
+                    }
+                  }
+                }
+                window.onload = truncat;
+
+              <!--Krithi-->
           </script>
 
 </head>
@@ -161,13 +184,30 @@
             <label for="checkbox">Autoplay Slider</label>
           </div>
 
+          <!--Krithi-->
+          <div>
+            <h1><u> Krithi </u> </h1>
+          </div>
+          <div class="part2">
+            <div id="content3">
+              <img id="div1" img style="box-shadow: 5px 5px 5px #000000; width:200px;height:200px;" src="../images/krithi.jpg" alt="picture of krithi here">
+            </div>
+          </div>
+          <div>
+            <p id="truncateMe">Hi this is me Krithi on the pic. I am new intern here at ATB. It has been quite interesting and a nice learning process so far for my first week in here. I love the people in here who are very helpful and easily approachable, unlike other organizations.
+              I am looking forward towards an enriching experience here at ATB, where I would learn a lot grow as an individual. Well now to know more about me, click the button which says ' Read More '... :D
+            </p>
+          </div>
+          <div>
+            <input type="button" onclick="location.href='krithibio.html';" value="Read More" />
+          </div>
+
         </div>
 
             <footer id="page-footer">
                     	<div class="container">
-                        	<p>&#169; 2016 Kripa Homepage, All rights reserved</p>
+                        	<p>&#169; 2016 Kripa and Krithi Homepage, All rights reserved</p>
                       </div>
             </footer>
 
-</body>
 </html>
