@@ -1,0 +1,12 @@
+git add -- all
+
+git commmit -m "comments"
+
+git push origin/master
+
+git pull upstream master
+
+git remote -v
+
+git remote add upstream https://github.com/GraduateSchoolUSA/Website-GraduateSchool.git
+

@@ -1,0 +1,7 @@
+git add #.html - will only add all the html files
+
+git add abc.html -- will add this particular file  to server
+
+git pull orgin master --- to pull the new branch to latest code in master
+
+git 
