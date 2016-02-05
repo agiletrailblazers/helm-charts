@@ -5,7 +5,7 @@
 
           <meta charset="utf-8" >
 
-          <title>Kripa Homepage</title>
+          <title>Homepage</title>
 
           <meta name="description" content="Explore all the qualities of kripa..">
 
@@ -22,32 +22,32 @@
           <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>"
           <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
-<!-- <script type="text/javascript">
-function Slider(){
-  $(".slider #1").show("fade",500);
-  $(".slider #1").delay(4000).hide("slide",{direction:'left'},500);
+<!--Krithi-->
 
-  var sc=$(".slider img").size();
-  var count=2;
+<script type="text/javascript">
+function truncat(){
+var len = 100;
+var p = document.getElementById('truncateMe');
+if (p) {
 
-  setInterval( function() {
+  var trunc = p.innerHTML;
+  if (trunc.length > len) {
 
-    $(".slider #"+count).show("slide",{direction:'right'},500);
-    $(".slider #"+count).delay(4000).hide("slide",{direction:'right'},500);
+    trunc = trunc.substring(0, len);
+    trunc = trunc.replace(/\w+$/, '');
 
-    if(count==sc)
-    {
-      count=1;
-    }
-    else{
-      count=count+1;
-    }
-  }; 6500);
+    trunc += '<a href="#" ' +
+      'onclick="this.parentNode.innerHTML=' +
+      'unescape(\''+escape(p.innerHTML)+'\');return false;">' +
+      '...<\/a>';
+    p.innerHTML = trunc;
+  }
 }
+}
+window.onload= truncat;
+</script>
 
-</script> -->
-
-
+<!--Krithi-->
 
 
 </head>
@@ -69,7 +69,7 @@ function Slider(){
                     </div>
                     <div id=aboutme>
                       <h1>OVERVIEW</h1>
-                      <p>jkdsnjc djkcs djnsbjdjx djjdjdjd  dsddj djdjdj jsjjsjs jsjjsjs </p>
+                      <p> </p>
                     </div>
             </div>
 
@@ -85,9 +85,37 @@ function Slider(){
                     </div>
             </div>
 
+<!--Krithi-->
+
+            <div>
+              <h1><u> Krithi </u> </h1>
+            </div>
+
+            <div class="part2">
+
+                    <div id="content3">
+                      <img id="div1" img style="box-shadow: 5px 5px 5px #000000; width:200px;height:200px;"  src="C:\Users\Krithi C\Desktop\intern-demo\webpages\krithi.jpg" alt="picture of krithi here">
+                    </div>
+            </div>
+
+            <div>
+              <p id="truncateMe">Hi this is me Krithi on the pic. I am new intern here at ATB. It has been quite interesting and a nice learning process
+                 so far for my first week in here. I love the people in here who are very helpful and easily approachable, unlike other organizations. I am
+                 looking forward towards an enriching experience here at ATB, where I would learn a lot  grow as an individual.
+                 Well now to know more about me, click the button which says ' Read More '... :D
+              </p>
+            </div>
+
+            <div>
+                    <input type="button" onclick="location.href='krithibio.html';" value="Read More" />
+            </div>
+
+
+
+<!--general-->
             <footer id="page-footer">
                     	<div class="container">
-                        	<p>&#169; 2016 Kripa Homepage, All rights reserved</p>
+                        	<p>&#169; 2016 Kripa & Krithi Homepage, All rights reserved</p>
                       </div>
             </footer>
 
