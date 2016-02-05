@@ -14,7 +14,7 @@
           -->
 
           <link rel="stylesheet" type="text/css" href="C:\Users\bbart\Desktop\temp1\intern-demo\stylesheet\basestyle.css">
-      
+
           <script src="C:\Users\bbart\Desktop\temp1\intern-demo\js\slider.js">
 </script>
 
@@ -28,45 +28,95 @@
 
           <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 
-<script language="javascript" type="text/javascript" src="/js/readmore.js"></script>
+          <script language="javascript" type="text/javascript" src="/js/readmore.js"></script>
 
           <script type="text/javascript">
-          $(document).ready(function() {
-    // Configure/customize these variables.
-    var showChar = 50;  // How many characters are shown by default
-    var ellipsestext = "...";
-    var moretext = "Show more >";
-    var lesstext = "Show less";
+              $(document).ready(function() {
+              // Configure/customize these variables.
+              var showChar = 50;  // How many characters are shown by default
+              var ellipsestext = "...";
+              var moretext = "---";
+              var lesstext = "---";
 
 
-    $('.more').each(function() {
-        var content = $(this).html();
+              $('.more').each(function() {
+                  var content = $(this).html();
 
-        if(content.length > showChar) {
+                  if(content.length > showChar) {
 
-            var c = content.substr(0, showChar);
-            var h = content.substr(showChar, content.length - showChar);
+                      var c = content.substr(0, showChar);
+                      var h = content.substr(showChar, content.length - showChar);
 
-            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+                      var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
 
-            $(this).html(html);
-        }
+              $(this).html(html);
 
-    });
+                  }
 
-    $(".morelink").click(function(){
-        if($(this).hasClass("less")) {
-            $(this).removeClass("less");
-            $(this).html(moretext);
-        } else {
-            $(this).addClass("less");
-            $(this).html(lesstext);
-        }
-        $(this).parent().prev().toggle();
-        $(this).prev().toggle();
-        return false;
-    });
-});
+              });
+
+              $(".morelink").click(function(){
+                  if($(this).hasClass("less")) {
+                      $(this).removeClass("less");
+                      $(this).html(moretext);
+                  } else {
+                      $(this).addClass("less");
+                      $(this).html(lesstext);
+                  }
+                  $(this).parent().prev().toggle();
+                  $(this).prev().toggle();
+                  return false;
+              });
+              });
+
+
+                jQuery(document).ready(function ($) {
+
+                $('#checkbox').change(function(){
+                  setInterval(function () {
+                      moveRight();
+                  }, 3000);
+                });
+
+              	var slideCount = $('#slider ul li').length;
+              	var slideWidth = $('#slider ul li').width();
+              	var slideHeight = $('#slider ul li').height();
+              	var sliderUlWidth = slideCount * slideWidth;
+
+              	$('#slider').css({ width: slideWidth, height: slideHeight });
+
+              	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+                  $('#slider ul li:last-child').prependTo('#slider ul');
+
+                  function moveLeft() {
+                      $('#slider ul').animate({
+                          left: + slideWidth
+                      }, 200, function () {
+                          $('#slider ul li:last-child').prependTo('#slider ul');
+                          $('#slider ul').css('left', '');
+                      });
+                  };
+
+                  function moveRight() {
+                      $('#slider ul').animate({
+                          left: - slideWidth
+                      }, 200, function () {
+                          $('#slider ul li:first-child').appendTo('#slider ul');
+                          $('#slider ul').css('left', '');
+                      });
+                  };
+
+                  $('a.control_prev').click(function () {
+                      moveLeft();
+                  });
+
+                  $('a.control_next').click(function () {
+                      moveRight();
+                  });
+
+              });
+
 
           </script>
 
@@ -91,6 +141,7 @@
                       <h1>OVERVIEW</h1>
 
                       <span class="more"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enjhhbbhjjjjjjjjjjjjjbkbn hbjk iusmod tempor incanim id est laborum.</span>
+                      <input type="button" onclick="location.href='kripabio.html';" value="Read More" />
                     </div>
             </div>
 
@@ -98,9 +149,9 @@
             <a href="#" class="control_next">>></a>
             <a href="#" class="control_prev"><</a>
             <ul>
-              <li><img style="box-shadow: 5px 5px 5px #000000; width:350px;height:300px;"  src="C:\Users\bbart\Desktop\Kripa\images\kripa.jpg" alt="kripa-photo"></li>
+              <li><img style="box-shadow: 5px 5px 5px #000000; width:350px;height:300px;"  src="images\uncc2.jpg" alt="kripa-photo"></li>
 
-              <li><img style="box-shadow: 5px 5px 5px #000000; width:350px;height:300px;"  src="C:\Users\bbart\Desktop\Kripa\images\kripa.jpg" alt="kripa-photo"></li>
+              <li><img style="box-shadow: 5px 5px 5px #000000; width:350px;height:300px;"  src="images\uncc3.jpg" alt="kripa-photo"></li>
 
             </ul>
           </div>
