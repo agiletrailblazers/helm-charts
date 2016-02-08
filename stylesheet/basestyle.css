@@ -3,16 +3,45 @@ body {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+*
+{
+    margin:0;
+    border:0;
+    box-sizing: border-box;
+}
+
+.clearfix:after
+{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+
+}
+
+* html .clearfix
+{
+    zoom: 1;
+} /* IE6 */
+
+
 header
 {
 	color: black;
-	background-color: lightgrey;
+
 	margin-left: -5px;
   text-align: center;
 	right: 0;
   bottom: 0;
   left: 0;
 	top: 0;
+}
+header
+{
+    background:lightgrey;
+
 }
 
 .morecontent span {
@@ -108,39 +137,6 @@ a.control_next {
 *********************************************/
 /*============= COMMON CSS ATTRIBUTES ================ */
 
-*
-{
-    margin:0;
-    border:0;
-    box-sizing: border-box;
-}
-
-body
-{
-    margin: 0;
-    padding: 0;
-    font-family: 'Muli', serif;
-    text-align: justify;
-    text-justify: inter-word;
-    padding-bottom:50px;
-}
-
-.clearfix:after
-{
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-
-}
-
-* html .clearfix
-{
-    zoom: 1;
-} /* IE6 */
-
 *:first-child+html .clearfix
 {
     zoom: 1;
@@ -152,11 +148,7 @@ body
       min-width: 980px;
       margin: 0 auto;
 }
-header
-{
-    background-color: white;
 
-}
 
 p {
     font-size:medium;
@@ -207,14 +199,14 @@ color:#ffc000;
 }
 
 footer{
-    color: #999999;
+    color: black;
     text-align: center;
     margin-top: 1%;
     position:fixed;
     width:100%;
     bottom: 0px;
     padding-bottom: 10px;
-    background:#fff;
+    background:lightgrey;
 }
 
 
