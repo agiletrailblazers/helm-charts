@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>\
+
+        <title>Homepage ATB</title>
+        <link rel="stylesheet" type="text/css" href="../stylesheet/basestyle.css">
+        <script src="../js/jquery.min.js" type="text/javascript">
+        </script><script src="../js/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script>
+        <script src="../js/custom.js" type="text/javascript"></script>
+        <link href="../stylesheet/basestyle.css" type="text/css" rel="stylesheet">
+	      <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Muli">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../stylesheet/font-awesome.css">
+
+    </head>
+    <body>
+        <header class="clearfix">
+
+            <div class="wrap">
+            <div id="logo">
+              <b>Homepage</b>
+                        </div>
+                      <nav id="prim-nav">
+                <ul>
+
+                    <li><a href="index.html"><b>HOME</b></a></li>
+
+                  </ul>
+            </nav>
+            </div>
+        </header>
+        <script>
+        $(function() {
+            $('#carousel').carouFredSel({
+                    responsive: true,
+                    items: {
+                            visible: 1,
+                            width: 1000,
+                            height: 300
+
+                    },
+                    scroll: {
+                            duration: 1000,
+                            timeoutDuration: 4000,
+                            fx: 'uncover-fade'
+                    },
+                    pagination: '#pager'
+            });
+        });
+        </script>
+
+        <div id="carousel">
+            <div>
+                <img src="../images/cover/uncc.jpg" class="img-size"/>
+            </div>
+            <div>
+                <img src="../images/cover/uncc2.jpg" class="img-size"/>
+            </div>
+            <div>
+                <img src="../images/cover/uncc3.jpg" class="img-size"/>
+            </div>
+
+        </div>
+
+</div>
+<footer  id="footer">
+  <div class="wrap">
+
+              Copyright 2016 &copy; Agiletrailblazers
+              <br>
+              Designed by: Krishna Kripa and Krithi
+  </div>
+</footer>
+</body>
+</html>

@@ -1,5 +1,5 @@
 
-          jQuery(document).ready(function ($) {
+  jQuery(document).ready(function ($) {
 
   $('#checkbox').change(function(){
     setInterval(function () {
