@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Homepage ATB</title>
+        <!--
+        ============================= styelsheet ==========================
+        -->
 
-          <meta charset="utf-8" >
-
-          <title>Kripa and Krithi Homepage</title>
-
-          <meta name="description" content="Explore all the qualities of kripa and krithi..">
-
-          <!--
-          ============================= styelsheet ==========================
-          -->
-
-          <link rel="stylesheet" type="text/css" href="../stylesheet/basestyle.css">
-
-          <script src="../js/slider.js"></script>
-
-
-
-          <!--
-          ============================= jQuery link ==========================
+        <link rel="stylesheet" type="text/css" href="../stylesheet/basestyle.css">
+        <script src="../js/jquery.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script>
+        <script src="../js/custom.js" type="text/javascript"></script>
+        <link href="../stylesheet/basestyle.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Muli">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../stylesheet/font-awesome.css">
 
 
-          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>"
-          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>  -->
+<script>
+        <!--Krithi-->
 
-          <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+                function truncat() {
+                  var len = 100;
+                  var p = document.getElementById('truncateMe');
+                  if (p) {
 
-          <script language="javascript" type="text/javascript" src="../js/readmore.js"></script>
+                    var trunc = p.innerHTML;
+                    if (trunc.length > len) {
 
-          <script type="text/javascript">
+                      trunc = trunc.substring(0, len);
+                      trunc = trunc.replace(/\w+$/, '');
+
+                      trunc += '<a href="#" ' +
+                        'onclick="this.parentNode.innerHTML=' +
+                        'unescape(\'' + escape(p.innerHTML) + '\');return false;">' +
+                        '...<\/a>';
+                      p.innerHTML = trunc;
+                    }
+                  }
+                }
+                window.onload = truncat;
+
+              <!--Krithi-->
+
               $(document).ready(function() {
               // Configure/customize these variables.
               var showChar = 50;  // How many characters are shown by default
@@ -69,125 +83,52 @@
               });
               });
 
+            </script>
 
-                jQuery(document).ready(function ($) {
+    </head>
+    <body>
+        <header class="clearfix">
 
-                $('#checkbox').change(function(){
-                  setInterval(function () {
-                      moveRight();
-                  }, 3000);
-                });
+            <div class="wrap">
+            <div id="logo">
+                    <b>Homepage</b>
+            <nav id="prim-nav">
+                <ul>
 
-              	var slideCount = $('#slider ul li').length;
-              	var slideWidth = $('#slider ul li').width();
-              	var slideHeight = $('#slider ul li').height();
-              	var sliderUlWidth = slideCount * slideWidth;
+                    <li><a href="home.html"><b>HOME</b></a></li>
+                    <li><a href="people.html"><b>PEOPLE</b></a></li>
 
-              	$('#slider').css({ width: slideWidth, height: slideHeight });
-
-              	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-
-                  $('#slider ul li:last-child').prependTo('#slider ul');
-
-                  function moveLeft() {
-                      $('#slider ul').animate({
-                          left: + slideWidth
-                      }, 200, function () {
-                          $('#slider ul li:last-child').prependTo('#slider ul');
-                          $('#slider ul').css('left', '');
-                      });
-                  };
-
-                  function moveRight() {
-                      $('#slider ul').animate({
-                          left: - slideWidth
-                      }, 200, function () {
-                          $('#slider ul li:first-child').appendTo('#slider ul');
-                          $('#slider ul').css('left', '');
-                      });
-                  };
-
-                  $('a.control_prev').click(function () {
-                      moveLeft();
-                  });
-
-                  $('a.control_next').click(function () {
-                      moveRight();
-                  });
-
-              });
-
-              <!--Krithi-->
-
-                function truncat() {
-                  var len = 100;
-                  var p = document.getElementById('truncateMe');
-                  if (p) {
-
-                    var trunc = p.innerHTML;
-                    if (trunc.length > len) {
-
-                      trunc = trunc.substring(0, len);
-                      trunc = trunc.replace(/\w+$/, '');
-
-                      trunc += '<a href="#" ' +
-                        'onclick="this.parentNode.innerHTML=' +
-                        'unescape(\'' + escape(p.innerHTML) + '\');return false;">' +
-                        '...<\/a>';
-                      p.innerHTML = trunc;
-                    }
-                  }
-                }
-                window.onload = truncat;
-
-              <!--Krithi-->
-          </script>
-
-</head>
-
-<body>
-
-            <div class="page">
-            <header id="header">
-              <div class="header-top clearfix">
-                <h1>Homepage</h1>
-                <h3>Demo Project</h3>
-              </div>
-            </header>
+                </ul>
+            </nav>
             </div>
+        </header>
 
-            <div class="wrap clearfix">
-                    <div id="content1">
-                      <img style="box-shadow: 5px 5px 5px #000000; width:350px;height:300px;"  src="C:\Users\bbart\Desktop\temp1\intern-demo\images\kripa.jpg" alt="kripa-photo">
-                    </div>
-                    <div id=aboutme>
-                      <h1>OVERVIEW</h1>
 
-                      <span class="more"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enjhhbbhjjjjjjjjjjjjjbkbn hbjk iusmod tempor incanim id est laborum.</span>
-                      <input type="button" onclick="location.href='people.html';" value="Read More" />
-                    </div>
-            </div>
 
-          <div id="slider">
-            <a href="#" class="control_next">>></a>
-            <a href="#" class="control_prev"><</a>
-            <ul>
-              <li><img style="box-shadow: 5px 5px 5px #000000; width:350px;height:300px;"  src="../images/uncc2.jpg" alt="kripa-photo"></li>
+<div class="slider clearfix">
+    <div id="wrapper">
 
-              <li><img style="box-shadow: 5px 5px 5px #000000; width:350px;height:300px;"  src="../images/uncc3.jpg" alt="kripa-photo"></li>
+      <div class="wrap clearfix">
+                          <div id="content1">
+                            <img style="box-shadow: 5px 5px 5px #000000; width:350px;height:300px;"  src="../images/kripa.jpg" alt="kripa-photo">
+                          </div>
 
-            </ul>
-          </div>
+                  </div>
 
-          <div class="slider_option">
-            <input type="checkbox" id="checkbox">
-            <label for="checkbox">Autoplay Slider</label>
-          </div>
+        <div class="wrap clearfix">
+            <div id="aboutme">
+                    <b>Ov</b>er <b>vi</b>e</b>w<b>
+    <span class="more"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enjhhbbhjjjjjjjjjjjjjbkbn hbjk iusmod tempor incanim id est laborum.</span>
+                    <input type="button" onclick="location.href='people.html';" value="Read More" />
 
-          <!--Krithi-->
-          <div>
-            <h1><u> Krithi </u> </h1>
-          </div>
+                </p>
+
+        </div>
+    </div>
+</div>
+
+<!--Krithi-->
+
           <div class="part2">
             <div id="content3">
               <img id="div1" img style="box-shadow: 5px 5px 5px #000000; width:200px;height:200px;" src="../images/krithi.jpg" alt="picture of krithi here">
@@ -204,10 +145,15 @@
 
         </div>
 
-            <footer id="page-footer">
-                    	<div class="container">
-                        	<p>&#169; 2016 Kripa and Krithi Homepage, All rights reserved</p>
-                      </div>
-            </footer>
 
+
+<footer  id="footer">
+    <div class="wrap">
+
+                Copyright 2016 &copy; Agiletrailblazers
+                <br>
+                Designed by: Krishna Kripa and Krithi
+    </div>
+</footer>
+</body>
 </html>
