@@ -185,7 +185,6 @@ div#content-home{
 
 }
 
-
 div #small-photo{
     width:400px;
     height:330px;
@@ -233,4 +232,9 @@ div #title-people{
         z-index:-1;
 }
 
-/*========================================================*/
+#contentpara{
+  float: center;
+	font-size: 30px;
+	line-height: 1.7em;
+	padding-bottom: 5px;
+}
